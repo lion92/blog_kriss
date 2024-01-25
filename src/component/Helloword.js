@@ -13,7 +13,7 @@ const Helloword = () => {
             <button><NavLink to={"/articles"}>
 
 
-                <MenuItem><h2 className="menuTitle">A Propos </h2></MenuItem>
+                <MenuItem><h2 className="menuTitle">Mes articles de projets</h2></MenuItem>
             </NavLink></button>
             <h1>Bienvenue dans mon blog d'article</h1>
             <div className="photo"><img src="https://projet.krissclotilde.com/asset/avatar-gratuit.png"

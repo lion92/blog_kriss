@@ -10,8 +10,8 @@ const ListProjets = () => {
     return (
         <div>
 
-            <button><NavLink to={"/Youtube"}>
-                <MenuItem><h2 className="menuTitle">You tube </h2></MenuItem>
+            <button><NavLink to={"/hello"}>
+                <MenuItem><h2 className="menuTitle">hello</h2></MenuItem>
             </NavLink></button>
 
             <h1>Comment créer un projet React app avec un minimum de chose:</h1>
@@ -21,6 +21,22 @@ const ListProjets = () => {
             <div className="clone_git">
                 <Gist id="99b008bf95608a47a3c1db1ded4c257a"/>
             </div>
+            <h2>Pour creer le projet faire:</h2>
+            <ul>
+                <li>npx create-react-app nom_du_projet</li>
+                <li>cd nom_du_projet</li>
+                <li>integrer le fichier index.js dans src</li>
+                <li>
+                    <div className="clone_git">
+                        <Gist id="36f33038792cffdabce8e2c93c12dc02"/>
+                    </div>
+                </li>
+                <li>npm uninstall react-router-dom</li>
+                <li>npm install react-router-dom@5.2.0</li>
+                <li>Creer un composent HelloWorld</li>
+                <li>Le mettre au niveau du router</li>
+                <li>npm start</li>
+            </ul>
 
         </div>
     );

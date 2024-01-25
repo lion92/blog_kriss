@@ -9,6 +9,7 @@ const Root = () => (
     <Router>
         <Switch>
             <Route exact path="/" component={Helloword}/>
+            <Route exact path="/hello" component={Helloword}/>
             <Route exact path="/articles" component={ListProjets}/>
             <Route exact path="*" component={Helloword}/>
 
