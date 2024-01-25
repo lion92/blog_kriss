@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './css/listProjets.css'
+import './css/articles.css'
 import Gist from "react-gist";
 import {NavLink} from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 
 
-const ListProjets = () => {
+const Articles = () => {
     return (
         <div>
 
@@ -42,4 +42,4 @@ const ListProjets = () => {
     );
 };
 
-export default ListProjets;
+export default Articles;
