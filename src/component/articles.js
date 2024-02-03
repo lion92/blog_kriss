@@ -15,7 +15,7 @@ const Articles = () => {
             </NavLink></button>
 
             <h1>Comment créer un projet React app avec un minimum de chose:</h1>
-            <h2>J'ai crée un projet react app avec un router et material ui d'intégré pour pour utiliser la librairie de
+            <h2>J'ai crée un projet react app avec un router et material ui d'intégré pour utiliser la librairie de
                 composant.</h2>
             <p>Il suffit de faire un git clone de https://github.com/lion92/blog_kriss.git</p>
             <div className="clone_git">

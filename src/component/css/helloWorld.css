@@ -125,3 +125,22 @@ p {
         text-align: center;
     }
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    h1 {
+        font-size: 0.6em;
+        color:black;
+        text-align: center;
+    }
+
+
+    h2 {
+        font-size: 0.5em;
+        color:blue;
+        text-align: center;
+    }
+    p {
+        font-size: 0.4em;
+        color:black;
+        text-align: center;
+    }
+}
