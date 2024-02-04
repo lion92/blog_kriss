@@ -50,15 +50,10 @@ export default function MenuComponent(props) {
                     <NavLink to={"/inscription"}>
                         <li>Inscription<MdOutlineAppRegistration /></li>
                     </NavLink>
-                    <NavLink to={"/categorie"}>
-                        <li>Categorie<BiSolidCategory /></li>
-                    </NavLink>
                     <NavLink to={"/form"}>
                         <li>Tache<GoTasklist /></li>
                     </NavLink>
-                    <NavLink to={"/budget"}>
-                        <li>Budget<CiMoneyBill /></li>
-                    </NavLink>
+
 
                 </ul>
             </div>

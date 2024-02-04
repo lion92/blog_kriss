@@ -6,6 +6,7 @@ import Helloword from "./component/Helloword";
 import Articles from "./component/articles";
 import DashInscription from "./component/DashInscription";
 import DashLogin from "./component/DashLogin";
+import DashTache from "./component/DashTache";
 
 const Root = () => (
     <Router>
@@ -13,7 +14,8 @@ const Root = () => (
             <Route exact path="/" component={DashInscription}/>
             <Route exact path="/login" component={DashLogin}/>
             <Route exact path="/hello" component={Helloword}/>
-            <Route exact path="/articles" component={Articles}/>
+            <Route exact path="/form" component={DashTache}/>
+            <Route exact path="/inscription" component={DashInscription}/>
             <Route exact path="*" component={Helloword}/>
 
         </Switch>

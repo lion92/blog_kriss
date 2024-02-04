@@ -203,7 +203,7 @@ export default function Form(props) {
                 <div>
                     <label id="idLabel">
                         id:{idVal} </label>
-                    <div className="divCentrer">
+                    <div className="containerColumn">
                         <div>
                             <label>Titre</label>
                             <input placeholder="Titre" value={titre} onChange={(e) => Valuechange(e)}/>{" "}

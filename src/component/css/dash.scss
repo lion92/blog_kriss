@@ -585,7 +585,7 @@ textarea:not([cols]) {
 
 .home-section {
   left: 250px;
-  top:-30px;
+  top:-10px;
 }
 
 .home-section-hide {
@@ -675,4 +675,34 @@ button:hover {
   padding: .375em 1.125em;
   font-size: 1rem;
   height: 100%;
+}
+.containerCote{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.containerColumn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+.card{
+  position: relative;
+  border-radius: 18px;
+  box-shadow: 2px 4px 12px #00000014;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  transition: all .3s cubic-bezier(0,0,.5,1);
+}
+.card button{
+  position: absolute;
+  bottom: 0;
 }
