@@ -703,6 +703,6 @@ button:hover {
   transition: all .3s cubic-bezier(0,0,.5,1);
 }
 .card button{
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  margin-bottom: 5px;
 }

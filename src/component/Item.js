@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-
+import { SlLike } from "react-icons/sl";
+import { SlDislike } from "react-icons/sl";
 export default function Item(props) {
 
     const [iditem, setItemid] = useState(-1);
     return (
         <>
-            <div className="card" style={{width: "200px", height:"300px"}} onClick={() => {
+            <div className="card" style={{width: "200px", height: "300px"}} onClick={() => {
                 props.updatefunc(props.id);
                 props.changeDec(props.description);
                 props.changetext(props.title);
@@ -14,7 +15,11 @@ export default function Item(props) {
                 <h1 style={{color: 'black'}}>{props.title}</h1>
 
                 <p style={{color: 'blue'}}>{props.description}</p>
+                <button style={{width: '100%'}}><SlLike/></button>
+                <button style={{width: '100%'}}><SlDislike/></button>
+                <button style={{width: '100%'}}>Publier</button>
                 <button style={{width: '100%'}} onClick={(e) => props.del(e, props.id)}>delete</button>
+
             </div>
         </>
     );
