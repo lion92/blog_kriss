@@ -1,6 +1,6 @@
 import React, {useCallback, useState} from 'react';
 import lien from './lien'
-
+import './css/dash.scss'
 const Inscription = () => {
     const [email, setEmail] = useState("");
     const [inscriptionError, setInscriptionError] = useState("");

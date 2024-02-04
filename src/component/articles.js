@@ -4,7 +4,7 @@ import './css/articles.css'
 import Gist from "react-gist";
 import {NavLink} from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
-
+import './css/dash.scss'
 
 const Articles = () => {
     return (
