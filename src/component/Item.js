@@ -44,23 +44,26 @@ export default function Item(props) {
 
     return (
         <>
-            <div className="card" style={{width: "200px", height: "300px"}} onClick={() => {
-                props.updatefunc(props.id);
-                props.changeDec(props.description);
-                props.changetext(props.title);
-                props.changeColor(props.color);
-            }}>
-                <h1 style={{color: 'black'}}>{props.title}</h1>
+        <div className="card" style={{width: "200px", height: "300px"}} onClick={() => {
+            props.updatefunc(props.id);
+            props.changeDec(props.description);
+            props.changetext(props.title);
+            props.changeColor(props.color);
+        }}>
+            <h1 style={{color: 'black'}}>{props.title}</h1>
 
-                <p style={{color: 'blue'}}>{props.description}</p>
-                <button style={{width: '100%'}}><SlLike/></button>
-                <button style={{width: '100%'}}><SlDislike/></button>
+            <p style={{color: 'blue'}}>{props.description}</p>
+            <button style={{width: '100%'}}>{props.numeberlike}<SlLike/></button>
+            <button style={{width: '100%'}}>{props.numeberDislike}<SlDislike/></button>
 
-                <button style={{width: '100%'}} onClick={(e) => props.del(e, props.id)}>delete</button>
+            <button style={{width: '100%'}} onClick={(e) => props.del(e, props.id)}>delete</button>
 
-            </div>
+        </div>
+        <div className="card">
             <button onClick={() => fetchIsPublishKO()} style={{width: '100%'}}>Publier Non</button>
             <button onClick={() => fetchIsPublishOK()} style={{width: '100%'}}>Publier OUi</button>
+
+        </div>
         </>
     );
 }

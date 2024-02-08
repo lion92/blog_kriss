@@ -176,14 +176,6 @@ export default function Form(props) {
     ////////////////////////input change description
     let valueChangeDescription = (e) => {
         let a = e.target.value;
-        console.log(a);
-
-        if (valueInputDescription.length > 50) {
-            setmessageErrorDescription("La valeur du titre ne doit pas dépasser 50 caracteres")
-        } else {
-            setmessageErrorDescription("");
-
-        }
         setDescription(a)
         return a;
     };
@@ -241,6 +233,8 @@ export default function Form(props) {
                                     description={item.description}
                                     isPublish={item.isPublish}
                                     id={item.id}
+                                    numeberlike={item.numberLike}
+                                    numeberDislike={item.numberDisLike}
                                 ></Item>
                             );
                         })}

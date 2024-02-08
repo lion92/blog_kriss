@@ -16,12 +16,9 @@ export default function ItemShowArticles(props) {
                 },
             }
         );
-        const resbis = await response;
+
     });
     let moredislike = useCallback(async () => {
-
-
-
         const response = await fetch(
             lien.url + "todos/moreDislike/" + props.id,
             {
@@ -31,16 +28,10 @@ export default function ItemShowArticles(props) {
                 },
             }
         );
-        const resbis = await response;
     });
     return (
         <>
-            <div className="card" onClick={() => {
-                props.updatefunc(props.id);
-                props.changeDec(props.description);
-                props.changetext(props.title);
-                props.changeColor(props.color);
-            }}>
+            <div className="card" >
                 <h1 style={{color: 'black'}}>{props.userNom}</h1>
                 <h1 style={{color: 'black'}}>{props.userPrenom}</h1>
                 <h1 style={{color: 'black'}}>{props.title}</h1>
@@ -49,8 +40,17 @@ export default function ItemShowArticles(props) {
 
 
             </div>
-            <button onClick={async () =>{await morelike();await fetchaAllArticle()}} style={{width: '100%'}}>{props.numeberlike}<SlLike/></button>
-            <button onClick={async ()=>{await moredislike();await fetchaAllArticle()}} style={{width: '100%'}}>{props.numeberDislike}<SlDislike/></button>
+            <div className="card">
+                <button onClick={async () => {
+                    await morelike();
+                    await fetchaAllArticle();
+                }} style={{width: '100%'}}>{props.numeberlike}<SlLike/></button>
+                <button onClick={async () => {
+                    await moredislike();
+                    await fetchaAllArticle();
+                }} style={{width: '100%'}}>{props.numeberDislike}<SlDislike/></button>
+            </div>
+
         </>
     );
 }
