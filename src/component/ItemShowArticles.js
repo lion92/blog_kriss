@@ -1,7 +1,7 @@
-import React, {useCallback, useState} from "react";
-import { SlLike } from "react-icons/sl";
-import { SlDislike } from "react-icons/sl";
+import React, {useCallback} from "react";
+import {SlDislike, SlLike} from "react-icons/sl";
 import lien from "./lien";
+
 export default function ItemShowArticles(props) {
     async function fetchaAllArticle  (){
             await props.fetchallbis();

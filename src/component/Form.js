@@ -117,7 +117,9 @@ export default function Form(props) {
                     title: titre,
                     description: valueInputDescription,
                     user: userid2,
-
+                    isPublish:false,
+                    numberLike:0,
+                    numberDisLike:0,
                     jwt: str
 
                 }),

@@ -30,7 +30,7 @@ export default function MenuComponent(props) {
 
             <div className={sidebar}>
                 <div className="logo-details">
-                    <div className="logo_name">Kriss CLOTILDE Budget</div>
+                    <div className="logo_name">Kriss CLOTILDE Blog</div>
                 </div>
                 <Link style={{width: '20px', margin: '0'}} onClick={() => {
                     localStorage.removeItem('jwt');
