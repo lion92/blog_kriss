@@ -687,9 +687,15 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  text-align: center;
+flex-wrap: wrap;
+}
+input{
   text-align: center;
 
+}
+textarea{
+  text-align: center;
 }
 .card{
   position: relative;

@@ -117,10 +117,9 @@ const Connection = () => {
                 <>
                     <div>
 
-                        <div className="container2">
+                        <div className="containerColumn">
                             {"" + probleme}
                             <div>{messageLog}</div>
-                            <div id="iconLogin"/>
                             <input id='email' value={email} placeholder={'email'} onChange={e => {
                                 setEmail(e.target.value);
                                 if (ValidateEmail(email)) {

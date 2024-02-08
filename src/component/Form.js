@@ -204,12 +204,12 @@ export default function Form(props) {
                     <label id="idLabel">
                         id:{idVal} </label>
                     <div className="containerColumn">
-                        <div>
+                        <div className="containerColumn">
                             <label>Titre</label>
                             <input placeholder="Titre" value={titre} onChange={(e) => Valuechange(e)}/>{" "}
                             <p className="error">{messageErrorTitre}</p>
                         </div>
-                        <div>
+                        <div className="containerColumn">
                             <label>Description</label>
                             <textarea placeholder="Description" value={valueInputDescription}
                                       onChange={(e) => valueChangeDescription(e)}/>{" "}
@@ -223,7 +223,7 @@ export default function Form(props) {
 
                     </div>
                 </div>
-                {!load ? <div className="containerCote">
+                {!load ? <div className="containerColumn">
 
 
                         {listItem.map((item, index) => {

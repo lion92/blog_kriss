@@ -53,6 +53,9 @@ export default function MenuComponent(props) {
                     <NavLink to={"/form"}>
                         <li>Tache<GoTasklist /></li>
                     </NavLink>
+                    <NavLink to={"/showArticles"}>
+                        <li>Articles Publiques</li>
+                    </NavLink>
 
 
                 </ul>
