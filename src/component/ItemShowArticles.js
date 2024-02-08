@@ -16,8 +16,8 @@ export default function ItemShowArticles(props) {
                 <h1 style={{color: 'black'}}>{props.title}</h1>
 
                 <p style={{color: 'blue'}}>{props.description}</p>
-                <button style={{width: '100%'}}><SlLike/></button>
-                <button style={{width: '100%'}}><SlDislike/></button>
+                <button style={{width: '100%'}}>{props.numeberlike}<SlLike/></button>
+                <button style={{width: '100%'}}>{props.numeberDislike}<SlDislike/></button>
 
             </div>
         </>

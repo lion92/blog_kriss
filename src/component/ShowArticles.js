@@ -51,6 +51,8 @@ const ShowArticles = () => {
                                     userNom={item.nom}
                                     userPrenom={item.prenom}
                                     id={item.id}
+                                    numeberlike={item.numberLike}
+                                    numeberDislike={item.numberDisLike}
                                 ></ItemShowArticles>
                             );
                         })}
