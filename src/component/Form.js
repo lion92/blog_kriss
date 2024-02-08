@@ -155,6 +155,8 @@ export default function Form(props) {
         const resbis = await response;
         await fetchAPI();
     });
+
+
     ////////////////////////input change value
     let Valuechange = (e) => {
         let a = e.target.value;
@@ -236,6 +238,7 @@ export default function Form(props) {
                                     updatefunc={idchange}
                                     title={item.title}
                                     description={item.description}
+                                    isPublish={item.isPublish}
                                     id={item.id}
                                 ></Item>
                             );
