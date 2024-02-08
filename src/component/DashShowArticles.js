@@ -5,7 +5,7 @@ import ShowArticles from "./ShowArticles";
 
 const DashShowArticles = () => {
 
-    let titre = "Connection"
+    let titre = "Article récent du blog: "
     let contenue = <ShowArticles></ShowArticles>
 
     return (

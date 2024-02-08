@@ -6,7 +6,7 @@ import {MdOutlineAppRegistration} from "react-icons/md";
 import {BiSolidCategory} from "react-icons/bi";
 import {GoTasklist} from "react-icons/go";
 import {CiMenuBurger, CiMoneyBill} from "react-icons/ci";
-
+import { MdOutlineArticle } from "react-icons/md";
 export default function MenuComponent(props) {
     const [sidebar, setSideBar] = useState("sidebar");
     const [afficher, setAfficher] = useState(false)
@@ -54,7 +54,7 @@ export default function MenuComponent(props) {
                         <li>Tache<GoTasklist /></li>
                     </NavLink>
                     <NavLink to={"/showArticles"}>
-                        <li>Articles Publiques</li>
+                        <li>Articles Publiques<MdOutlineArticle /></li>
                     </NavLink>
 
 

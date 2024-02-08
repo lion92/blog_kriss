@@ -5,7 +5,7 @@ import Form from "./Form";
 
 const DashBoardLogin = () => {
 
-    let titre = "Connection"
+    let titre = "Rédaction des articles"
     let contenue = <Form></Form>
 
     return (

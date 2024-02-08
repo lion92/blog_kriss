@@ -325,7 +325,6 @@ body {
 }
 
 
-
 /*
 *************************************************
 
@@ -349,14 +348,17 @@ body {
   transition: all ease-in-out 0.3s;
   font-family: Roboto;
 }
+
 #blur {
   font-size: 40px;
   color: transparent;
   text-shadow: 0 0 8px #000;
 }
-.react-calendar__month-view__weekdays__weekday{
+
+.react-calendar__month-view__weekdays__weekday {
   display: none;
 }
+
 #header.open {
   padding: 0 36px 0 111px;
   box-sizing: border-box;
@@ -541,7 +543,6 @@ body {
 }
 
 
-
 .main {
   max-width: 100%;
   display: grid;
@@ -556,8 +557,6 @@ body {
   border-radius: 9px;
   object-fit: cover;
 }
-
-
 
 
 button, select, input, textarea {
@@ -585,7 +584,7 @@ textarea:not([cols]) {
 
 .home-section {
   left: 250px;
-  top:-10px;
+  top: -10px;
 }
 
 .home-section-hide {
@@ -627,10 +626,6 @@ button hover {
 }
 
 
-
-
-
-
 button {
   border: none;
   transition: all 0.3s ease;
@@ -651,7 +646,8 @@ button:hover {
 .butGenerique {
   height: 8em;
 }
-.containerInscription{
+
+.containerInscription {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -661,55 +657,83 @@ button:hover {
 
 
 }
-.error{
+
+.error {
   font-size: 14px;
   color: red;
   margin: auto;
 }
-.principaleDiv{
+
+.principaleDiv {
   height: 70%;
 }
-.raise{
+
+.raise {
   background: white;
   border: solid 2px black;
   padding: .375em 1.125em;
   font-size: 1rem;
   height: 100%;
 }
-.containerCote{
+
+.containerCote {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 
 }
-.containerColumn{
+
+article {
+  border-top: 2px gray solid;
+  padding: 0 1em;
+  width: 150px;
+}
+
+.containerColumn {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 1em;
 }
-input{
-  text-align: center;
 
+
+input {
+  text-align: center;
+  height: 30px;
+  margin-bottom: 0.3em;
 }
-textarea{
+
+textarea {
   text-align: center;
 }
-.card{
-  position: relative;
-  border-radius: 18px;
-  box-shadow: 2px 4px 12px #00000014;
-  box-sizing: border-box;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 10px;
+
+.card {
   padding: 5px;
-  transition: all .3s cubic-bezier(0,0,.5,1);
-}
-.card button{
-  position: relative;
-  margin-bottom: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #d1bef1;
+
+  &.green {
+    background-color: var(--c-green-500);
+  }
+
+  &.olive {
+    background-color: var(--c-olive-500);
+  }
+
+  &.gray {
+    background-color: var(--c-gray-300);
+  }
+
+  span:last-child {
+    align-self: flex-end;
+  }
 }

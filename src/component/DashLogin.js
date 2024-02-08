@@ -4,7 +4,7 @@ import MenuComponent from "./MenuComponent";
 
 const DashBoardLogin = () => {
 
-    let titre = "Connection"
+    let titre = "Connexion"
     let contenue = <Connection></Connection>
 
     return (

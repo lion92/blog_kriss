@@ -31,16 +31,17 @@ export default function ItemShowArticles(props) {
     });
     return (
         <>
-            <div className="card" >
-                <h1 style={{color: 'black'}}>{props.userNom}</h1>
-                <h1 style={{color: 'black'}}>{props.userPrenom}</h1>
-                <h1 style={{color: 'black'}}>{props.title}</h1>
-
-                <p style={{color: 'blue'}}>{props.description}</p>
+            <div className="card" style={{width:"370px"}}>
+                <h1 style={{color: 'black',width:"370px"}}>{props.userNom}</h1>
+                <h1 style={{color: 'black',width:"370px"}}>{props.userPrenom}</h1>
+                <h1 style={{color: 'black',width:"370px"}}>{props.title}</h1>
+                <article id="tab1">
+                    <p style={{color: 'blue'}}>{props.description}</p>
+                </article>
 
 
             </div>
-            <div className="card">
+            <div className="card" style={{width:"370px"}}>
                 <button onClick={async () => {
                     await morelike();
                     await fetchaAllArticle();
