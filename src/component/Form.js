@@ -75,6 +75,7 @@ export default function Form(props) {
     let textebis = (data) => {
         setValue(data);
     };
+
     ///////////////////////////////////////////////////////////remonter le texte
     let textebisDesc = (data) => {
         setDescription(data);
@@ -198,7 +199,7 @@ export default function Form(props) {
     return (
 
         <div>
-
+            {!!localStorage.getItem('jwt')?
             <div className="div2">
 
 
@@ -248,7 +249,7 @@ export default function Form(props) {
                     : <h1>Chargement...</h1>}
 
             </div>
-
+                :<p style={{color:"red", textAlign:"center"}}>"veuillez vous connecter."</p>}
         </div>
 
     );

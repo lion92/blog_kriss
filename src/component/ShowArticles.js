@@ -2,7 +2,6 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import './css/helloWorld.css'
 import './css/dash.scss'
-import Item from "./Item";
 import lien from "./lien";
 import ItemShowArticles from "./ItemShowArticles";
 
@@ -20,6 +19,9 @@ const ShowArticles = () => {
             setLoad(false);
         }, 500);
         console.log(load);
+    };
+    let fetchall = async () => {
+        await fetchAPI()
     };
     useEffect(() => {
         fetchAPI();
@@ -50,6 +52,7 @@ const ShowArticles = () => {
                                     description={item.description}
                                     userNom={item.nom}
                                     userPrenom={item.prenom}
+                                    fetchallbis={fetchall}
                                     id={item.id}
                                     numeberlike={item.numberLike}
                                     numeberDislike={item.numberDisLike}
