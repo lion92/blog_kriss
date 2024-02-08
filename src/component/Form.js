@@ -197,7 +197,7 @@ export default function Form(props) {
 
                 <div>
                     <label id="idLabel">
-                        id:{idVal} </label>
+                      </label>
                     <div className="containerColumn">
                         <div className="containerColumn">
                             <label>Titre</label>

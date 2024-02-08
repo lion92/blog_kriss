@@ -706,6 +706,13 @@ input {
   height: 30px;
   margin-bottom: 0.3em;
 }
+li{
+  text-align: center;
+}
+li:hover{
+  background-color: wheat;
+  text-align: center;
+}
 
 textarea {
   text-align: center;
