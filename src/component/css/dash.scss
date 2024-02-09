@@ -20,7 +20,6 @@ body {
   top: 0;
   height: 100%;
 
-  background: #9461ad;
   padding: 6px 14px;
   box-sizing: border-box;
   transition: all 0.5s ease;
@@ -148,7 +147,7 @@ body {
   border: none;
   border-radius: 12px;
   transition: all 0.1s ease;
-  background: #481d7e;
+
   padding: 0 15px 0 60px;
   box-sizing: border-box;
 }
@@ -165,12 +164,12 @@ body {
   left: 0;
   transform: translateY(-50%);
   font-size: 22px;
-  background: #4f1374;
+
   color: #FFF;
 }
 
 .sidebar.open .bx-search:hover {
-  background: #1d1b31;
+
   color: #FFF;
 }
 
@@ -187,7 +186,7 @@ body {
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  background: #481d7e;
+
 }
 
 .sidebar li a:hover {
@@ -270,7 +269,6 @@ body {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background: #4f1374;
   height: 60px;
   line-height: 60px;
   border-radius: 0px;
@@ -295,7 +293,7 @@ body {
   left: 210px;
   width: calc(100% - 250px);
   transition: all 0.5s ease;
-  background-color: #4ab9a9;
+
 
 }
 
@@ -585,7 +583,6 @@ textarea:not([cols]) {
 .home-section {
   left: 250px;
   top: -10px;
-  background-color: #48a7b4;
 }
 
 .home-section-hide {
@@ -699,7 +696,7 @@ article {
   flex-direction: column;
   flex-wrap: wrap;
   font-size: 1em;
-  background-color: #603b75;
+
 }
 
 
@@ -745,4 +742,13 @@ textarea {
   span:last-child {
     align-self: flex-end;
   }
+}
+body{
+  background-color: #333;
+  background-image: url('../image/fond_all.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
 }
