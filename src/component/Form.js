@@ -2,6 +2,8 @@ import React, {useCallback, useEffect, useState} from "react";
 import Item from "./Item";
 import lien from './lien'
 import './css/dash.scss'
+import UploadFile from "./uploadFile";
+
 export default function Form(props) {
     let [titre, setValue] = useState("");
     let [messageErrorDescription, setmessageErrorDescription] = useState("");
@@ -12,6 +14,13 @@ export default function Form(props) {
     let [listItem, setText] = useState([]);
     ///////////////////////////
     const [load, setLoad] = useState(false);
+    const [file, setFile]=useState()
+
+    function handleFile(event){
+        setFile(event.target.file)
+
+    }
+
 
 
     let attendre = () => {
@@ -123,9 +132,6 @@ export default function Form(props) {
                     jwt: str
 
                 }),
-                headers: {
-                    "Content-Type": "application/json",
-                },
             }
         );
         const resbis = await response;
@@ -189,7 +195,17 @@ export default function Form(props) {
         setTitre("");
     };
     /////////////////////////
+function handleUpload(e){
+    e.preventDefault()
+    const formData=new FormData()
+    formData.append(('file'),file)
 
+    fetch('http://localhost:3000/todos/upload', {
+        method:'POST',
+        body: formData,
+    }).then((res)=>console.log(res)).then(result=>console.log(result)).catch(err=>console.log(err))
+
+}
     return (
 
         <div>
@@ -198,9 +214,12 @@ export default function Form(props) {
 
 
                 <div>
+                   <UploadFile></UploadFile>
+
                     <label id="idLabel">
-                      </label>
+                    </label>
                     <div className="containerColumn">
+
                         <div className="containerColumn">
                             <label>Titre</label>
                             <input placeholder="Titre" value={titre} onChange={(e) => Valuechange(e)}/>{" "}
@@ -223,7 +242,7 @@ export default function Form(props) {
                 {!load ? <div className="containerColumn">
 
 
-                        {listItem.map((item, index) => {
+                    {listItem.map((item, index) => {
                             return (
                                 <Item
                                     del={del}
