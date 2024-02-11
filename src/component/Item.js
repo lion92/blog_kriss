@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from "react";
-import { SlLike } from "react-icons/sl";
-import { SlDislike } from "react-icons/sl";
+import {SlDislike, SlLike} from "react-icons/sl";
 import lien from "./lien";
+
 export default function Item(props) {
     let fetchIsPublishOK = useCallback(async () => {
         let str = "" + localStorage.getItem('jwt')
@@ -10,7 +10,7 @@ export default function Item(props) {
             {
                 method: "PUT",
                 body: JSON.stringify({
-                    isPublish:1,
+                    isPublish: 1,
                     jwt: str
                 }),
                 headers: {
@@ -30,7 +30,7 @@ export default function Item(props) {
                 method: "PUT",
                 body: JSON.stringify({
 
-                    isPublish:0,
+                    isPublish: 0,
                     jwt: str
                 }),
                 headers: {
@@ -44,20 +44,21 @@ export default function Item(props) {
 
     return (
         <div className="card">
-        <div className="card" style={{width: "370px"}} onClick={() => {
-            props.updatefunc(props.id);
-            props.changeDec(props.description);
-            props.changetext(props.title);
-            props.changeColor(props.color);
-        }}>
-            <h1 style={{color: 'black'}}>{props.title}</h1>
+            <div className="card" style={{width: "370px"}} onClick={() => {
+                props.updatefunc(props.id);
+                props.changeDec(props.description);
+                props.changetext(props.title);
+                props.changeColor(props.color);
+            }}>
+                <h1 style={{color: 'black'}}>{props.title}</h1>
 
-            <p style={{color: 'blue'}}>{props.description}</p>
+                <p style={{color: 'blue'}}>{props.description}</p>
+                {!!props?.fileName ? <img style={{width: "7em", height: "7em"}} src={lien.url + "uploads/" + props.fileName} alt="photo"/> : <p>pas de photo</p>}
 
 
-            <button style={{width: '100%'}} onClick={(e) => props.del(e, props.id)}>delete</button>
+                <button style={{width: '100%'}} onClick={(e) => props.del(e, props.id)}>delete</button>
 
-        </div>
+            </div>
             <div className="card">
                 <button style={{width: '100%'}}>{props.numeberlike}<SlLike/></button>
                 <button style={{width: '100%'}}>{props.numeberDislike}<SlDislike/></button>

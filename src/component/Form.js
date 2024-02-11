@@ -2,7 +2,6 @@ import React, {useCallback, useEffect, useState} from "react";
 import Item from "./Item";
 import lien from './lien'
 import './css/dash.scss'
-import UploadFile from "./uploadFile";
 
 export default function Form(props) {
     let [titre, setValue] = useState("");
@@ -16,12 +15,34 @@ export default function Form(props) {
     const [load, setLoad] = useState(false);
     const [file, setFile]=useState()
 
-    function handleFile(event){
-        setFile(event.target.file)
 
-    }
+    const handleFileChange = (e) => {
+        if (e.target.files) {
+            setFile(e.target.files[0]);
+        }
+    };
+    const handleUpload = async () => {
+        if (file) {
+            console.log("Uploading file...");
 
+            const formData = new FormData();
+            formData.append("file", file);
 
+            try {
+                // You can write the URL of your server or any other endpoint used for file upload
+                const result = await fetch("http://localhost:3000/todos/upload", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                const data = await result.json();
+
+                console.log(data);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    };
 
     let attendre = () => {
         setLoad(true);
@@ -129,9 +150,11 @@ export default function Form(props) {
                     isPublish:false,
                     numberLike:0,
                     numberDisLike:0,
+                    pictureName:!!file?.name?file?.name:"",
                     jwt: str
-
-                }),
+                }), headers: {
+                    "Content-Type": "application/json",
+                },
             }
         );
         const resbis = await response;
@@ -152,8 +175,8 @@ export default function Form(props) {
                     title: titre,
                     description: valueInputDescription,
                     user: id,
-
-                    jwt: str
+                    jwt: str,
+                    pictureName:!!file?.name?file?.name:""
 
                 }),
                 headers: {
@@ -195,17 +218,6 @@ export default function Form(props) {
         setTitre("");
     };
     /////////////////////////
-function handleUpload(e){
-    e.preventDefault()
-    const formData=new FormData()
-    formData.append(('file'),file)
-
-    fetch('http://localhost:3000/todos/upload', {
-        method:'POST',
-        body: formData,
-    }).then((res)=>console.log(res)).then(result=>console.log(result)).catch(err=>console.log(err))
-
-}
     return (
 
         <div>
@@ -214,7 +226,24 @@ function handleUpload(e){
 
 
                 <div>
-                   <UploadFile></UploadFile>
+                    <div>
+                        <label htmlFor="file" className="sr-only">
+                            Choose a file
+                        </label>
+                        <input id="file" type="file" onChange={handleFileChange} />
+                    </div>
+                    {file && (
+                        <section>
+                            File details:
+                            <ul>
+                                <li>Name: {file.name}</li>
+                                <li>Type: {file.type}</li>
+                                <li>Size: {file.size} bytes</li>
+                            </ul>
+                        </section>
+                    )}
+
+                    {file && <button onClick={handleUpload}>Upload a file</button>}
 
                     <label id="idLabel">
                     </label>
@@ -251,6 +280,7 @@ function handleUpload(e){
                                     changetext={textebis}
                                     updatefunc={idchange}
                                     title={item.title}
+                                    fileName={item?.pictureName}
                                     description={item.description}
                                     isPublish={item.isPublish}
                                     id={item.id}

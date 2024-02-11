@@ -55,6 +55,7 @@ const ShowArticles = () => {
                                     fetchallbis={fetchall}
                                     id={item.id}
                                     numeberlike={item.numberLike}
+                                    fileName={item.pictureName}
                                     numeberDislike={item.numberDisLike}
                                 ></ItemShowArticles>
                             );

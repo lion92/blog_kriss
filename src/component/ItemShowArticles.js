@@ -32,6 +32,7 @@ export default function ItemShowArticles(props) {
     return (
         <>
             <div className="card" style={{width:"370px"}}>
+                {!!props?.fileName ? <img style={{width: "7em", height: "7em"}} src={lien.url + "uploads/" + props.fileName} alt="photo"/> : <p>pas de photo</p>}
                 <h1 style={{color: 'black',width:"370px"}}>{props.userNom}</h1>
                 <h1 style={{color: 'black',width:"370px"}}>{props.userPrenom}</h1>
                 <h1 style={{color: 'black',width:"370px"}}>{props.title}</h1>
