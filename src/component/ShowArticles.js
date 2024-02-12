@@ -29,7 +29,7 @@ const ShowArticles = () => {
 
     ///////////////////fectchApi/////////////////////////
     const fetchAPI = useCallback(async () => {
-        const response = await fetch(lien.url + "todos");
+        const response = await fetch(lien.url + "todos/isConfirm");
         const resbis = await response.json();
         await setText(resbis);
         return resbis;
@@ -45,7 +45,7 @@ const ShowArticles = () => {
                 {!load ? <div className="containerColumn">
 
 
-                        {listItem.map((item) => {
+                        {listItem?.map((item) => {
                             return (
                                 <ItemShowArticles
                                     title={item.title}

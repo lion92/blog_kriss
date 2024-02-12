@@ -42,9 +42,15 @@ const Connection = () => {
     }
 
     let fetchUerToken = useCallback(async (e) => {
-        let str = "" + localStorage.getItem('jwt')
-        let response = null;
 
+        let response = null;
+        if(localStorage.getItem('jwt')==null){
+            return
+        }
+        if(localStorage.getItem('jwt')==undefined){
+            return
+        }
+        let str = "" + localStorage.getItem('jwt')
         response = await fetch(
             lien.url + "connection/user",
             {

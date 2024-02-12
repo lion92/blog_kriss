@@ -30,7 +30,7 @@ export default function Form(props) {
 
             try {
                 // You can write the URL of your server or any other endpoint used for file upload
-                const result = await fetch("http://localhost:3000/todos/upload", {
+                const result = await fetch(`${lien.url}todos/upload`, {
                     method: "POST",
                     body: formData,
                 });
