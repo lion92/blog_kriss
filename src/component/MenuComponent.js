@@ -57,7 +57,10 @@ export default function MenuComponent(props) {
                         <li>Articles Publiques<MdOutlineArticle /></li>
                     </NavLink>
                     <NavLink to={"/confirm"}>
-                        <li>ConfirmationPublicatgion<MdOutlineArticle /></li>
+                        <li>ConfirmationPublication<MdOutlineArticle /></li>
+                    </NavLink>
+                    <NavLink to={"/users"}>
+                        <li>Utilisateurs<MdOutlineArticle /></li>
                     </NavLink>
 
 

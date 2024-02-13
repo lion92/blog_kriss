@@ -1,7 +1,8 @@
-import React, {useCallback} from "react";
+import React, {useCallback, useState} from "react";
 import lien from "./lien";
 
 export default function ConfirmItemShowArticles(props) {
+    const [messageLog, setMessageLog] = useState("");
     async function fetchaAllArticle  (){
             await props.fetchallbis();
     }
@@ -24,7 +25,8 @@ export default function ConfirmItemShowArticles(props) {
             }
         );
         const resbis = await response;
-
+        console.log(resbis)
+        setMessageLog(""+JSON.stringify(resbis))
 
     });
 
@@ -48,11 +50,15 @@ export default function ConfirmItemShowArticles(props) {
             }
         );
 
+        const resbis = await response;
+
+        setMessageLog(""+JSON.stringify(resbis))
     });
 
     return (
         <>
             <div className="card" style={{width:"370px"}}>
+                <p style={{color:"red"}}>{messageLog}</p>
                 {!!props?.fileName ? <img style={{width: "7em", height: "7em"}} src={lien.url + "uploads/" + props.fileName} alt="photo"/> : <p>pas de photo</p>}
                 <h1 style={{color: 'black',width:"370px"}}>{props.userNom}</h1>
                 <h1 style={{color: 'black',width:"370px"}}>{props.userPrenom}</h1>
