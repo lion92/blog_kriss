@@ -37,7 +37,7 @@ export default function User(props) {
         <div>
             {!!localStorage.getItem('jwt') ?
                 <div className="div2">
-                    <div className="containerColumn">
+                    <div className="containerAll">
 
 
                             {listItem?.map((item, index) => {

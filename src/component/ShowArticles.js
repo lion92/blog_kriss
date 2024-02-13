@@ -42,7 +42,7 @@ const ShowArticles = () => {
 
 
 
-                {!load ? <div className="containerColumn">
+                {!load ? <div className="containerAll">
 
 
                         {listItem?.map((item) => {

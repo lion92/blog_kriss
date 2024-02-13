@@ -698,7 +698,16 @@ article {
   font-size: 1em;
 
 }
+.containerAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  font-size: 1em;
+  flex-wrap: wrap;
 
+}
 
 input {
   text-align: center;
@@ -750,5 +759,4 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 300px;
 }

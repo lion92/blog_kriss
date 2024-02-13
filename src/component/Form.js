@@ -269,7 +269,7 @@ export default function Form(props) {
 
                     </div>
                 </div>
-                {!load ? <div className="containerColumn">
+                {!load ? <div className="containerAll">
 
 
                     {listItem.map((item, index) => {

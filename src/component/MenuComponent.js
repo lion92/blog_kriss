@@ -51,7 +51,7 @@ export default function MenuComponent(props) {
                         <li>Inscription<MdOutlineAppRegistration /></li>
                     </NavLink>
                     <NavLink to={"/form"}>
-                        <li>Tache<GoTasklist /></li>
+                        <li>Articles<GoTasklist /></li>
                     </NavLink>
                     <NavLink to={"/showArticles"}>
                         <li>Articles Publiques<MdOutlineArticle /></li>
