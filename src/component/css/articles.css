@@ -1,21 +1,45 @@
-.clone_git{
-    width: 50%;
-    margin: auto;
+.clone_git {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
-li{
-    text-align: center;
 
+li {
+    text-align: center;
+    margin-bottom: 10px;
+    list-style-position: inside;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .clone_git{
+
+/* Petits écrans (smartphones) */
+@media screen and (max-width: 480px) {
+    .clone_git {
+        width: 95%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-
+        padding: 10px;
     }
-    li{
-        text-align: center;
 
+    li {
+        font-size: 0.9rem;
+        padding: 0 5px;
+    }
+}
+
+/* Écrans moyens (tablettes) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .clone_git {
+        width: 85%;
+        padding: 15px;
+    }
+}
+
+/* Grands écrans */
+@media screen and (min-width: 769px) {
+    .clone_git {
+        width: 70%;
     }
 }
